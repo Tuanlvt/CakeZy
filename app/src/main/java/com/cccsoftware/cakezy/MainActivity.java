@@ -11,8 +11,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView helloWorldTxt = findViewById(R.id.helloWorldTxt);
-        helloWorldTxt.setOnClickListener(view -> Toast.makeText(MainActivity.this, "Hello World!", Toast.LENGTH_LONG).show());
     }
 }
-

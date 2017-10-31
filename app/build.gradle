@@ -1,32 +1,90 @@
 apply plugin: 'com.android.application'
+apply from: '../autodimension.gradle'
+
+def APP_ID = "com.cccsoftware.cakezy"
+
+buildscript {
+  repositories {
+    maven { url 'https://maven.fabric.io/public' }
+  }
+
+  dependencies {}
+}
+
+repositories {
+  maven { url 'https://maven.fabric.io/public' }
+}
 
 android {
-    compileSdkVersion 26
-    defaultConfig {
-        applicationId "com.cccsoftware.cakezy"
-        minSdkVersion 19
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+
+  defaultConfig {
+    applicationId "${APP_ID}"
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode rootProject.ext.versionCode
+    versionName rootProject.ext.versionName
+
+    vectorDrawables.useSupportLibrary = true
+
+    testApplicationId "${APP_ID + ".test"}"
+    testInstrumentationRunner "${APP_ID + ".test.Instrumentation"}"
+    multiDexEnabled true
+  }
+
+  dataBinding {
+    enabled = true
+  }
+
+  lintOptions {
+    abortOnError false
+  }
+
+  buildTypes {
+    debug {
+      versionNameSuffix = "debug"
+      ext.betaDistributionReleaseNotesFilePath = "release_notes.txt"
+      ext.betaDistributionGroupAliases = "Framgia"
+      ext.betaDistributionNotifications = true
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+    release {
+      shrinkResources true
+      minifyEnabled true
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  buildToolsVersion '26.0.2'
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+  implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+  Map<String, String> dependencies = rootProject.ext.dependencies
+
+  implementation dependencies.supportDesign
+  implementation dependencies.constraintLayout
+  implementation dependencies.supportAppCompat
+
+  implementation dependencies.rxJava
+  implementation dependencies.rxAndroid
+
+  implementation dependencies.retrofit2
+  implementation dependencies.retrofit2Adapter
+  implementation dependencies.retrofitGson
+  implementation dependencies.loggingInterceptor
+  implementation dependencies.cardView
+  implementation dependencies.glide
+
+  annotationProcessor dependencies.dagger2Compile
+  implementation dependencies.dagger2
+  provided dependencies.annotation
+
+  testImplementation dependencies.junit
+  testImplementation dependencies.mockito
+
+  androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
