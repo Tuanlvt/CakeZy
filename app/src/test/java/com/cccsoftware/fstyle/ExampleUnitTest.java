@@ -1,4 +1,4 @@
-package com.cccsoftware.cakezy;
+package com.cccsoftware.fstyle;
 
 import org.junit.Test;
 

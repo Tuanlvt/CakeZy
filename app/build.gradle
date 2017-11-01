@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply from: '../autodimension.gradle'
 
-def APP_ID = "com.cccsoftware.cakezy"
+def APP_ID = "com.fstyle.cakezy"
 
 buildscript {
   repositories {
