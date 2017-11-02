@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">CakeZy</string>
+    <string name="app_name">Cakezy</string>
+    <string name="create_cake">Create Cake</string>
+    <string name="save">Save</string>
 </resources>

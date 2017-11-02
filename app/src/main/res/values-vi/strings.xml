@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cakezy</string>
+    <string name="create_cake">Tạo bánh</string>
+    <string name="save">Lưu lại</string>
+</resources>

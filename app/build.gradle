@@ -1,7 +1,11 @@
 apply plugin: 'com.android.application'
 apply from: '../autodimension.gradle'
 
-def APP_ID = "com.cccsoftware.cakezy"
+/**
+ * start config and check ci*/
+apply from: '../checkci.gradle'
+
+def APP_ID = "com.fstyle.cakezy"
 
 buildscript {
   repositories {
@@ -57,7 +61,6 @@ android {
     sourceCompatibility JavaVersion.VERSION_1_8
     targetCompatibility JavaVersion.VERSION_1_8
   }
-  buildToolsVersion '26.0.2'
 }
 
 dependencies {
