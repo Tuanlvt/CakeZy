@@ -7,7 +7,7 @@ import io.reactivex.Single;
 
 public interface CakeDataSource {
     /**
-     * LocalData For User
+     * LocalData For Cake
      */
     interface LocalDataSource {
         Completable saveCakeToLocalData(CakeModel cakeModel);
@@ -16,7 +16,7 @@ public interface CakeDataSource {
     }
 
     /**
-     * RemoteData For User
+     * RemoteData For Cake
      */
     interface RemoteDataSource {
         Completable doUploadCakeToServer(CakeModel cakeModel);

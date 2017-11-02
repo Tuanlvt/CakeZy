@@ -22,7 +22,7 @@ public class RepositoryModule {
 
     @Provides
     @AppScope
-    public CakeRepository provideUserRepository(CakeLocalDataSourceImpl userLocalDataSource, CakeRemoteDataSourceImpl userRemoteDataSource) {
-        return new CakeRepositoryImpl(userLocalDataSource,userRemoteDataSource);
+    public CakeRepository provideCakeRepository(CakeLocalDataSourceImpl cakeLocalDataSource, CakeRemoteDataSourceImpl cakeRemoteDataSource) {
+        return new CakeRepositoryImpl(cakeLocalDataSource, cakeRemoteDataSource);
     }
 }
