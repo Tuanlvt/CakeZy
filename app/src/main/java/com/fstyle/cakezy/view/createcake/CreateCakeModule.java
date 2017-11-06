@@ -3,12 +3,10 @@ package com.fstyle.cakezy.view.createcake;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-
 import com.fstyle.cakezy.repository.CakeRepository;
 import com.fstyle.cakezy.utils.dagger.FragmentScope;
 import com.fstyle.cakezy.viewmodel.CakeViewModel;
 import com.fstyle.cakezy.viewmodel.impl.CakeViewModelImpl;
-
 import dagger.Module;
 import dagger.Provides;
 

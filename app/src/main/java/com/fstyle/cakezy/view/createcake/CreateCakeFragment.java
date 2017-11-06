@@ -1,17 +1,16 @@
 package com.fstyle.cakezy.view.createcake;
 
+import android.app.ActionBar;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.fstyle.cakezy.R;
 import com.fstyle.cakezy.databinding.FragmentCreateCakeBinding;
 import com.fstyle.cakezy.view.BaseFragment;
 import com.fstyle.cakezy.viewmodel.CakeViewModel;
-
 import javax.inject.Inject;
 
 /**
@@ -26,7 +25,7 @@ public class CreateCakeFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+            @Nullable Bundle savedInstanceState) {
 
         DaggerCreateCakeComponent.builder()
                 .appComponent(getAppComponent())
@@ -37,6 +36,9 @@ public class CreateCakeFragment extends BaseFragment {
         FragmentCreateCakeBinding binding =
                 DataBindingUtil.inflate(inflater, R.layout.fragment_create_cake, container, false);
         binding.setViewModel(mViewModel);
+        ActionBar.LayoutParams layoutParams =
+                new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.MATCH_PARENT);
         return binding.getRoot();
     }
 

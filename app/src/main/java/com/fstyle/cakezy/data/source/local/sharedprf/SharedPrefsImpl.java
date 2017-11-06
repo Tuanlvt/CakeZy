@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 
 public class SharedPrefsImpl implements SharedPrefsApi {
 
-    private static final String PREFS_NAME = "WSMSharedPreferences";
+    private static final String PREFS_NAME = "CakezySharedPreferences";
 
     private SharedPreferences mSharedPreferences;
 

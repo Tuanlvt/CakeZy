@@ -5,6 +5,4 @@ package com.fstyle.cakezy.viewmodel;
  */
 
 public interface CakeViewModel extends BaseViewModel {
-
-    String getTextSample();
 }
