@@ -1,4 +1,4 @@
-package com.fstyle.cakezy.view;
+package com.fstyle.cakezy.screen;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

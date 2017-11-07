@@ -3,8 +3,9 @@
     <string name="app_name">Cakezy</string>
     <string name="create_cake">Tạo bánh</string>
     <string name="save">Lưu lại</string>
-    <string name="choose_the_type_of_cake">Chọn loại bánh</string>
     <string name="next">Tiếp theo</string>
     <string name="cake_1_floor">Bánh kem 1 tầng</string>
     <string name="cake_2_floor">Bánh kem 2 tầng</string>
+    <string name="decorations_cake">Trang trí bánh</string>
+    <string name="choose_style_cake">Chọn kiểu bánh</string>
 </resources>

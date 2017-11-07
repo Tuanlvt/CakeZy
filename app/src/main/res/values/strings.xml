@@ -2,8 +2,9 @@
     <string name="app_name">Cakezy</string>
     <string name="create_cake">Create Cake</string>
     <string name="save">Save</string>
-    <string name="choose_the_type_of_cake">Choose the type of cake</string>
     <string name="next">Next</string>
     <string name="cake_one_floor">Cake 1-floor</string>
     <string name="cake_two_floor">Cake 2-floor</string>
+    <string name="decorations_cake">Decorations Cake</string>
+    <string name="choose_style_cake">Choose style Cake</string>
 </resources>
