@@ -1,4 +1,4 @@
-package com.fstyle.cakezy.view.createcake;
+package com.fstyle.cakezy.view.decorationscake;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -7,34 +7,35 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.fstyle.cakezy.R;
-import com.fstyle.cakezy.databinding.FragmentCreateCakeBinding;
+import com.fstyle.cakezy.databinding.FragmentDecorationsCakeBinding;
 import com.fstyle.cakezy.view.BaseFragment;
-import com.fstyle.cakezy.viewmodel.CakeViewModel;
+import com.fstyle.cakezy.viewmodel.DecorationsCakeViewModel;
 import javax.inject.Inject;
 
 /**
- * Created by Tuanlvt on 01/11/2017.
+ * Created by Tuanlvt on 06/11/2017.
  */
 
-public class CreateCakeFragment extends BaseFragment {
-
+public class DecorationsCakeFragment extends BaseFragment {
     @Inject
-    CakeViewModel mViewModel;
+    DecorationsCakeViewModel mViewModel;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
             @Nullable Bundle savedInstanceState) {
 
-        DaggerCreateCakeComponent.builder()
+        DaggerDecorationsCakeComponent.builder()
                 .appComponent(getAppComponent())
-                .createCakeModule(new CreateCakeModule(this))
+                .decorationsCakeModule(new DecorationsCakeModule(this))
                 .build()
                 .inject(this);
 
-        FragmentCreateCakeBinding binding =
-                DataBindingUtil.inflate(inflater, R.layout.fragment_create_cake, container, false);
+        FragmentDecorationsCakeBinding binding =
+                DataBindingUtil.inflate(inflater, R.layout.fragment_decorations_cake, container,
+                        false);
         binding.setViewModel(mViewModel);
+
         return binding.getRoot();
     }
 

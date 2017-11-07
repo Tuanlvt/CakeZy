@@ -4,9 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
-    protected void setUpActionBar() {
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    protected void setUpActionBar(Boolean setButtonBack, int title) {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(setButtonBack);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setTitle(getTitle());
+        getSupportActionBar().setTitle(title);
     }
 }

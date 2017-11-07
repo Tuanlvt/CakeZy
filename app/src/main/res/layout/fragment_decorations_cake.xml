@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="viewModel"
+            type="com.fstyle.cakezy.viewmodel.DecorationsCakeViewModel"
+            />
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.fstyle.cakezy.widget.DesignCakeView
+            android:id="@+id/image_cake"
+            android:layout_width="@dimen/dp_250"
+            android:layout_height="@dimen/dp_250"
+            android:adjustViewBounds="true"
+            android:background="@drawable/border_image_cake"
+            android:scaleType="fitCenter"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
