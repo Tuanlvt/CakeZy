@@ -1,7 +1,8 @@
-package com.fstyle.cakezy.viewmodel;
+package com.fstyle.cakezy.screen;
 
 /**
- * BaseView
+ * BasePresenter
+ *
  */
 public interface BaseViewModel {
 

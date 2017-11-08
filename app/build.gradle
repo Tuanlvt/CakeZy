@@ -52,10 +52,10 @@ android {
       ext.betaDistributionGroupAliases = "Framgia"
       ext.betaDistributionNotifications = true
     }
-    release {
-      shrinkResources true
-      minifyEnabled true
-    }
+//    release {
+//      shrinkResources true
+//      minifyEnabled true
+//    }
   }
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_1_8

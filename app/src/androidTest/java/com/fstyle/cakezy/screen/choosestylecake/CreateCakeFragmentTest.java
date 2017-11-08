@@ -1,4 +1,4 @@
-package com.fstyle.cakezy.view.createcake;
+package com.fstyle.cakezy.screen.choosestylecake;
 
 /**
  * Created by daolq on 11/2/17.

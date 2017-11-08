@@ -1,7 +1,6 @@
-package com.fstyle.cakezy.view;
+package com.fstyle.cakezy.screen;
 
 import android.support.v4.app.Fragment;
-
 import com.fstyle.cakezy.AppComponent;
 import com.fstyle.cakezy.MainApplication;
 
@@ -24,6 +23,6 @@ public abstract class BaseFragment extends Fragment {
     }
 
     protected AppComponent getAppComponent() {
-        return ((MainApplication)getActivity().getApplication()).getAppComponent();
+        return ((MainApplication) getActivity().getApplication()).getAppComponent();
     }
 }
