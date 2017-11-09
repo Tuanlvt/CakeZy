@@ -29,7 +29,8 @@ public class ChooseStyleCakeViewModel implements ChooseStyleCakeContract.ViewMod
         mPresenter.onStop();
     }
 
-    public void onClickNext() {
+    @Override
+    public void onNextButtonClick() {
         mNavigator.startActivity(DecorationsCakeActivity.class);
     }
 }
