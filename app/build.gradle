@@ -52,10 +52,10 @@ android {
       ext.betaDistributionGroupAliases = "Framgia"
       ext.betaDistributionNotifications = true
     }
-//    release {
-//      shrinkResources true
-//      minifyEnabled true
-//    }
+    //    release {
+    //      shrinkResources true
+    //      minifyEnabled true
+    //    }
   }
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_1_8
@@ -81,6 +81,8 @@ dependencies {
   implementation dependencies.loggingInterceptor
   implementation dependencies.cardView
   implementation dependencies.glide
+  implementation dependencies.lombok
+  annotationProcessor dependencies.lombok
 
   annotationProcessor dependencies.dagger2Compile
   implementation dependencies.dagger2
