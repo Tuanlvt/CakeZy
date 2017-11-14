@@ -10,5 +10,5 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class CreamCake extends BaseModel {
-    private Bitmap mCreamCake;
+    private Bitmap creamCakeDecorations;
 }

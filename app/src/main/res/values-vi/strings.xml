@@ -6,6 +6,7 @@
     <string name="next">Tiếp theo</string>
     <string name="cake_1_floor">Bánh kem 1 tầng</string>
     <string name="cake_2_floor">Bánh kem 2 tầng</string>
-    <string name="decorations_cake">Trang trí bánh</string>
+    <string name="decorations_body_cake">Trang trí thân bánh</string>
     <string name="choose_style_cake">Chọn kiểu bánh</string>
+    <string name="decorations_face_cake">Trang trí mặt bánh</string>
 </resources>

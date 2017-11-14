@@ -1,35 +1,34 @@
-package com.fstyle.cakezy.screen.decorationscake.adaptercandle;
+package com.fstyle.cakezy.screen.facecake.adapter;
 
 import android.databinding.BaseObservable;
-import android.graphics.Bitmap;
 import android.view.View;
-import com.fstyle.cakezy.data.model.CandleCake;
+import com.fstyle.cakezy.data.model.ColorCake;
 import com.fstyle.cakezy.screen.BaseRecyclerViewAdapter;
 
 /**
- * Created by Tuanlvt on 08/11/2017.
+ * Created by Tuanlvt on 13/11/2017.
  */
 
-public class ItemCandleViewModel extends BaseObservable {
+public class ItemColorFaceCakeViewModel extends BaseObservable {
 
-    private CandleCake mCandleCake;
+    private ColorCake mColorCake;
     private final BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object>
             mItemClickListener;
 
-    ItemCandleViewModel(CandleCake candleCake,
+    ItemColorFaceCakeViewModel(ColorCake colorCake,
             BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> listener) {
-        mCandleCake = candleCake;
+        mColorCake = colorCake;
         mItemClickListener = listener;
     }
 
-    public Bitmap getImageCandle() {
-        return mCandleCake.getCandleImageDecorations();
+    public int getColorCake() {
+        return mColorCake.getColorCakeDecorations();
     }
 
     public void onItemClick(View view) {
         if (mItemClickListener == null) {
             return;
         }
-        mItemClickListener.onItemRecyclerViewClick(mCandleCake);
+        mItemClickListener.onItemRecyclerViewClick(mColorCake);
     }
 }

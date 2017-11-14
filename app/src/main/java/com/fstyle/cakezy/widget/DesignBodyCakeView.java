@@ -13,6 +13,7 @@ import com.fstyle.cakezy.R;
 import com.fstyle.cakezy.data.model.CandleCake;
 import com.fstyle.cakezy.data.model.CreamCake;
 import com.fstyle.cakezy.data.model.DrawImage;
+import com.fstyle.cakezy.utils.Constant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +21,7 @@ import java.util.List;
  * Created by Tuanlvt on 06/11/2017.
  */
 
-public class DesignCakeView extends View {
+public class DesignBodyCakeView extends View {
     private Bitmap mBitmapCake;
     private Bitmap mBitmapCream;
     private Bitmap mBitmapCandle;
@@ -29,15 +30,15 @@ public class DesignCakeView extends View {
     private CreamCake mCreamCake;
     private CandleCake mCandleCake;
 
-    public DesignCakeView(Context context) {
+    public DesignBodyCakeView(Context context) {
         super(context);
     }
 
-    public DesignCakeView(Context context, @Nullable AttributeSet attrs) {
+    public DesignBodyCakeView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public DesignCakeView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public DesignBodyCakeView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -45,26 +46,35 @@ public class DesignCakeView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         mBitmapCake = BitmapFactory.decodeResource(getResources(), R.drawable.cake_design_1);
-        final float leftCake = (getWidth() - mBitmapCake.getWidth()) / 2.0f;
+        final float leftCake = (getWidth() - mBitmapCake.getWidth())
+                / Constant.NumberIntegerAndNumberFloat.NUMBER_TWO;
         final float topCake = getHeight() - mBitmapCake.getHeight();
 
         canvas.drawBitmap(mBitmapCake, leftCake, topCake, mPaint);
 
         if (mCreamCake != null) {
-            final float topCream = getHeight() - mBitmapCake.getHeight() / 1.56f;
+            final float topCream = getHeight()
+                    - mBitmapCake.getHeight()
+                    / Constant.NumberIntegerAndNumberFloat.NUMBER_ONE_POINT_FIFTY_SIX;
 
             mDrawImages.clear();
-            mDrawImages.add(new DrawImage(mCreamCake.getMCreamCake(), null));
-            mBitmapCream = mDrawImages.get(0).getMImageCream();
+            mDrawImages.add(new DrawImage(mCreamCake.getCreamCakeDecorations(), null, 0));
+            mBitmapCream = mDrawImages.get(Constant.NumberIntegerAndNumberFloat.NUMBER_ZERO)
+                    .getImageCreamDecorations();
             canvas.drawBitmap(mBitmapCream, leftCake, topCream, mPaint);
         }
 
         if (mCandleCake != null) {
-            final float leftCandle = getWidth() - mBitmapCake.getWidth() / 1.55f;
-            final float topCandle = getHeight() - mBitmapCake.getHeight() / 1.15f;
+            final float leftCandle = getWidth()
+                    - mBitmapCake.getWidth()
+                    / Constant.NumberIntegerAndNumberFloat.NUMBER_ONE_POINT_FIFTY_FIVE;
+            final float topCandle = getHeight()
+                    - mBitmapCake.getHeight()
+                    / Constant.NumberIntegerAndNumberFloat.NUMBER_ONE_POINT_FIFTEEN;
             mDrawImages.clear();
-            mDrawImages.add(new DrawImage(null, mCandleCake.getMCandleImage()));
-            mBitmapCandle = mDrawImages.get(0).getMImageCandle();
+            mDrawImages.add(new DrawImage(null, mCandleCake.getCandleImageDecorations(), 0));
+            mBitmapCandle = mDrawImages.get(Constant.NumberIntegerAndNumberFloat.NUMBER_ZERO)
+                    .getImageCandleDecorations();
             canvas.drawBitmap(mBitmapCandle, leftCandle, topCandle, mPaint);
         }
     }

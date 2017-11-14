@@ -10,6 +10,7 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class DrawImage extends BaseModel {
-    private Bitmap mImageCream;
-    private Bitmap mImageCandle;
+    private Bitmap imageCreamDecorations;
+    private Bitmap imageCandleDecorations;
+    private int colorFaceCakeDecorations;
 }
