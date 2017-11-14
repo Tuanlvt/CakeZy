@@ -5,6 +5,7 @@
     <string name="next">Next</string>
     <string name="cake_one_floor">Cake 1-floor</string>
     <string name="cake_two_floor">Cake 2-floor</string>
-    <string name="decorations_cake">Decorations Cake</string>
+    <string name="decorations_body_cake">Decorations Body Cake</string>
     <string name="choose_style_cake">Choose style Cake</string>
+    <string name="decorations_face_cake">Decorations Face Cake</string>
 </resources>

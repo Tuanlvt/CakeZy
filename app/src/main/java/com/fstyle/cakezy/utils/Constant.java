@@ -9,6 +9,19 @@ public final class Constant {
     public static final String END_POINT_URL = "http://google.com";
 
     private Constant() {
-        // No-op
+    }
+
+    /**
+     * Number Draw Canvas
+     */
+    public static class NumberIntegerAndNumberFloat {
+        public static final int NUMBER_ZERO = 0;
+        public static final int NUMBER_TWO = 2;
+        public static final int NUMBER_TEN = 10;
+        public static final float NUMBER_ONE_POINT_FIFTY_SIX = 1.56f;
+        public static final float NUMBER_ONE_POINT_FIFTY_FIVE = 1.55f;
+        public static final float NUMBER_ONE_POINT_FIFTEEN = 1.15f;
+        public static final float NUMBER_TWO_POINT_OH_FIVE = 2.05f;
+        public static final float NUMBER_TWO_POINT_OH_SEVEN = 2.07f;
     }
 }

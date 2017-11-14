@@ -17,9 +17,9 @@ import lombok.Setter;
 /**
  * Created by Tuanlvt on 08/11/2017.
  */
-@Setter
 public class CandleAdapter extends BaseRecyclerViewAdapter<CandleAdapter.ItemViewHolder> {
     private final List<CandleCake> mCandleCakes = new ArrayList<>();
+    @Setter
     private OnRecyclerViewItemClickListener<Object> mItemClickListener;
 
     public CandleAdapter(@NonNull Context context) {
