@@ -10,6 +10,7 @@ import com.fstyle.cakezy.data.model.CreamCake;
 import com.fstyle.cakezy.screen.BaseRecyclerViewAdapter;
 import com.fstyle.cakezy.screen.decorationscake.adaptercandle.CandleAdapter;
 import com.fstyle.cakezy.screen.decorationscake.adaptercream.CreamAdapter;
+import com.fstyle.cakezy.screen.facecake.FaceCakeActivity;
 import com.fstyle.cakezy.utils.navigator.Navigator;
 import java.util.ArrayList;
 import java.util.List;
@@ -70,6 +71,11 @@ public class DecorationsCakeViewModel implements DecorationsCakeContract.ViewMod
     @Override
     public ObservableField<CandleCake> getCandleCake() {
         return mCandleCakeObservableField;
+    }
+
+    @Override
+    public void onNextButtonClick() {
+        mNavigator.startActivity(FaceCakeActivity.class);
     }
 
     private void init() {

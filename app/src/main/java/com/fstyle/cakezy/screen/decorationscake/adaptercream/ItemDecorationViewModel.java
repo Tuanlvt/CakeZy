@@ -23,7 +23,7 @@ public class ItemDecorationViewModel extends BaseObservable {
     }
 
     public Bitmap getImageCreamDecorations() {
-        return mCreamCake.getMCreamCake();
+        return mCreamCake.getCreamCakeDecorations();
     }
 
     public void onItemClick(View view) {

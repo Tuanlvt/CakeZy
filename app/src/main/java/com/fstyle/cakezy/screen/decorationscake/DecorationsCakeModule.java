@@ -24,11 +24,11 @@ public class DecorationsCakeModule {
 
     @ActivityScope
     @Provides
-    public DecorationsCakeContract.ViewModel provideViewModel(
+    public DecorationsCakeContract.ViewModel provideViewModel(Navigator navigator,
             DecorationsCakeContract.Presenter presenter, CreamAdapter creamAdapter,
             CandleAdapter candleAdapter) {
-        return new DecorationsCakeViewModel(mActivity, provideNavigator(), creamAdapter,
-                candleAdapter, presenter);
+        return new DecorationsCakeViewModel(mActivity, navigator, creamAdapter, candleAdapter,
+                presenter);
     }
 
     @ActivityScope

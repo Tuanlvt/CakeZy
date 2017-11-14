@@ -24,6 +24,8 @@ public interface DecorationsCakeContract {
         ObservableField<CreamCake> getCreamCake();
 
         ObservableField<CandleCake> getCandleCake();
+
+        void onNextButtonClick();
         //From to Presenter
     }
 

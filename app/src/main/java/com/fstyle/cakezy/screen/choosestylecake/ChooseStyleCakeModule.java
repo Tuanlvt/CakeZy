@@ -22,9 +22,9 @@ public class ChooseStyleCakeModule {
 
     @ActivityScope
     @Provides
-    public ChooseStyleCakeContract.ViewModel provideViewModel(
+    public ChooseStyleCakeContract.ViewModel provideViewModel(Navigator navigator,
             ChooseStyleCakeContract.Presenter presenter) {
-        return new ChooseStyleCakeViewModel(provideNavigator(), presenter);
+        return new ChooseStyleCakeViewModel(navigator, presenter);
     }
 
     @ActivityScope

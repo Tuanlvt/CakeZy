@@ -17,9 +17,9 @@ import lombok.Setter;
 /**
  * Created by Tuanlvt on 08/11/2017.
  */
-@Setter
 public class CreamAdapter extends BaseRecyclerViewAdapter<CreamAdapter.ItemViewHolder> {
     private final List<CreamCake> mCreamCakes = new ArrayList<>();
+    @Setter
     private OnRecyclerViewItemClickListener<Object> mItemClickListener;
 
     public CreamAdapter(@NonNull Context context) {

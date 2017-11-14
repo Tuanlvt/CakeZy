@@ -10,5 +10,5 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class CandleCake extends BaseModel {
-    private Bitmap mCandleImage;
+    private Bitmap candleImageDecorations;
 }
