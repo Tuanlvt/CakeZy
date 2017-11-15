@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     >
     <data>
         <variable
             name="viewModel"
-            type="com.fstyle.cakezy.screen.facecake.adaptercolorcake.ItemColorFaceCakeViewModel"
+            type="com.fstyle.cakezy.screen.facecake.adapterdecorations.ItemDecorationsViewModel"
             />
         <import type="android.view.View"/>
     </data>
@@ -20,11 +20,9 @@
             android:layout_width="@dimen/dp_80"
             android:layout_height="@dimen/dp_80"
             android:layout_margin="@dimen/dp_3"
-            android:background="@drawable/button_gray"
+            android:background="@drawable/border_image_cake"
             android:onClick="@{viewModel::onItemClick}"
-            android:padding="@dimen/dp_10"
-            android:tint="@{viewModel.colorCake}"
-            app:srcCompat="@drawable/border_circle"
+            bind:imageBitmap="@{viewModel.imageDecorations}"
             tools:ignore="ContentDescription"
             />
     </android.support.constraint.ConstraintLayout>

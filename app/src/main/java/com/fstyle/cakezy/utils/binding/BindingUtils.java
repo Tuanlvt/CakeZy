@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import com.fstyle.cakezy.data.model.CandleCake;
 import com.fstyle.cakezy.data.model.ColorCake;
 import com.fstyle.cakezy.data.model.CreamCake;
+import com.fstyle.cakezy.data.model.DecorationsCake;
 import com.fstyle.cakezy.widget.DesignBodyCakeView;
 import com.fstyle.cakezy.widget.DesignFaceCakeView;
 
@@ -44,13 +45,17 @@ public final class BindingUtils {
         cakeView.invalidate();
     }
 
-    @BindingAdapter({ "setColorCake" })
-    public static void setColorCake(DesignFaceCakeView designFaceCakeView, ColorCake colorCake) {
-        if (colorCake == null) {
+    @BindingAdapter({ "setColorCake", "setDecorationsCake" })
+    public static void setFaceCake(DesignFaceCakeView designFaceCakeView, ColorCake colorCake,
+            DecorationsCake decorationsCake) {
+        if (colorCake == null && decorationsCake == null) {
             return;
         }
         if (colorCake != null) {
             designFaceCakeView.setColorCake(colorCake);
+        }
+        if (decorationsCake != null) {
+            designFaceCakeView.setDecorationsCake(decorationsCake);
         }
         designFaceCakeView.invalidate();
     }

@@ -1,4 +1,4 @@
-package com.fstyle.cakezy.screen.facecake.adapter;
+package com.fstyle.cakezy.screen.facecake.adaptercolorcake;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;

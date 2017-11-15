@@ -2,7 +2,8 @@ package com.fstyle.cakezy.screen.facecake;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
-import com.fstyle.cakezy.screen.facecake.adapter.ColorFaceCakeAdapter;
+import com.fstyle.cakezy.screen.facecake.adaptercolorcake.ColorFaceCakeAdapter;
+import com.fstyle.cakezy.screen.facecake.adapterdecorations.DecorationsCakeAdapter;
 import com.fstyle.cakezy.utils.dagger.ActivityScope;
 import dagger.Module;
 import dagger.Provides;
@@ -22,9 +23,10 @@ public class FaceCakeModule {
 
     @ActivityScope
     @Provides
-    public FaceCakeContract.ViewModel provideViewModel(ColorFaceCakeAdapter adapter,
-            FaceCakeContract.Presenter presenter) {
-        return new FaceCakeViewModel(adapter, presenter);
+    public FaceCakeContract.ViewModel provideViewModel(ColorFaceCakeAdapter colorFaceCakeAdapter,
+            DecorationsCakeAdapter decorationsCakeAdapter, FaceCakeContract.Presenter presenter) {
+        return new FaceCakeViewModel(mActivity, colorFaceCakeAdapter, decorationsCakeAdapter,
+                presenter);
     }
 
     @ActivityScope
@@ -37,5 +39,11 @@ public class FaceCakeModule {
     @Provides
     public ColorFaceCakeAdapter provideColorFaceAdapter() {
         return new ColorFaceCakeAdapter(mActivity);
+    }
+
+    @ActivityScope
+    @Provides
+    public DecorationsCakeAdapter provideDecorationsCakeAdapter() {
+        return new DecorationsCakeAdapter(mActivity);
     }
 }

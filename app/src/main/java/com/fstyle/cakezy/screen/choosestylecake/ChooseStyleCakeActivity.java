@@ -29,7 +29,7 @@ public class ChooseStyleCakeActivity extends BaseActivity {
 
         ActivityChooseStyleCakeBinding binding =
                 DataBindingUtil.setContentView(this, R.layout.activity_choose_style_cake);
-        binding.setViewModel((ChooseStyleCakeViewModel) mViewModel);
+        binding.setViewModel(mViewModel);
     }
 
     @Override
